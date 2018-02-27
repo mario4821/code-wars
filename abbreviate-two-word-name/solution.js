@@ -1,4 +1,13 @@
+let name = 'First Last';
 function abbrevName(name){
-    let splitString = name.split(' ');
-    return `${splitString[0].charAt(0)}.${splitString[1].charAt(0)}`
-   }
+  let first = name[0].toUpperCase();
+  let second;
+  let abbrev;
+  for (let i in name) {
+    if(name[i] === ' '){
+      second = name[parseInt(i) + 1].toUpperCase();
+      abbrev = `${first}.${second}`;
+    }
+  }
+  return abbrev;
+}
