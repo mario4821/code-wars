@@ -4,5 +4,5 @@ function cubeOdd(arr) {
    if(typeof arr[i] === 'string') return undefined;
  }
  let newArray = arr.map(num => Math.pow(num, 3));
- return newArray.filter(num => num % 2).reduce(reducer);
+ return newArray.filter(num => num % 2).reduce(reducer, 0);
 };
